@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serifs;
+  text-transform: capitalize;
+  background: rgb(240, 229, 231);
+}
+
+nav {
+  background: white;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-header h2 {
+  letter-spacing: 3px;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-header h2 span {
+  color: orangered;
+}
+
+.toggle {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: orangered;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle:hover {
+  transform: rotate(90deg);
+}
+
+.links li {
+  list-style: none;
+}
+
+.links li a {
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.3s;
+}
+
+.links li a:hover {
+  color: darkgreen;
+  background: lightgreen;
+  padding-left: 1.5rem;
+}
+
+.links-container {
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.icons-container {
+  display: none;
+}
+
+/* for larger screen */
+
+@media screen and (min-width: 800px) {
+  .toggle {
+    display: none;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+
+  .nav-center {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .icons-container {
+    display: flex;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .icons li {
+    list-style: none;
+    font-size: 1.5rem;
+  }
+
+  .icons li a {
+    color: lightskyblue;
+    transition: all 0.3s;
+  }
+
+  .icons li a:hover {
+    color: blue;
+  }
+
+  .links-container {
+    height: auto !important ;
+    display: flex;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+  }
+  .links li a {
+    padding: 0;
+  }
+  .links li a:hover {
+    background: transparent;
+    padding: 0;
+  }
+}
